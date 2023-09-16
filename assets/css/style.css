@@ -40,6 +40,21 @@ a {
     line-height: 50px;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
 .heading {
     font-family: var(--font-heading);
     color: #171100;
@@ -346,6 +361,7 @@ a {
 }
 
 .popular .head .title a {
+    padding-right: 6px;
     color: #171100;
     font-size: 1.8rem;
     font-weight: 600;
