@@ -575,10 +575,12 @@ a {
     display: flex;
     margin-top: 55px;
     gap: 30px;
+    overflow: hidden;
 }
 
 .blog-list .item {
-    width: calc(100% / 3);
+    flex-shrink: 0;
+    width: calc(100% / 3 - 20px);
     border-radius: 16px;
     background: #fff;
 }
@@ -645,5 +647,25 @@ a {
 }
 
 .blog-list .info .btn:hover {
+    background-color: var(--primary-color);
+}
+
+.blog .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 38px;
+}
+
+.blog .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    cursor: default;
     background-color: var(--primary-color);
 }
